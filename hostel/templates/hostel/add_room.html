@@ -1,0 +1,17 @@
+{% extends 'hostel/base.html' %}
+{% block content %}
+
+<div class="ttd-card">
+    <h4>Add Room</h4>
+
+    <form method="post">
+        {% csrf_token %}
+
+        <input class="form-control mb-2" name="room_number" placeholder="Room Number" required>
+        <input class="form-control mb-2" name="capacity" placeholder="Capacity" required>
+
+        <button class="btn btn-ttd mt-2">Add Room</button>
+    </form>
+</div>
+
+{% endblock %}

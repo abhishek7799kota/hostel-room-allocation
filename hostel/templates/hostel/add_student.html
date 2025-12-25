@@ -1,0 +1,20 @@
+{% extends 'hostel/base.html' %}
+{% block content %}
+
+<div class="ttd-card">
+    <h4>Add Student</h4>
+
+    <form method="post">
+        {% csrf_token %}
+
+        <input class="form-control mb-2" name="username" placeholder="Username" required>
+        <input class="form-control mb-2" name="password" placeholder="Password" required>
+        <input class="form-control mb-2" name="roll_no" placeholder="Roll Number" required>
+        <input class="form-control mb-2" name="department" placeholder="Department" required>
+        <input class="form-control mb-2" name="year" placeholder="Year" required>
+
+        <button class="btn btn-ttd mt-2">Add Student</button>
+    </form>
+</div>
+
+{% endblock %}

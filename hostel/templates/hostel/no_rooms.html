@@ -1,0 +1,18 @@
+{% extends 'hostel/base.html' %}
+
+{% block content %}
+
+<div class="ttd-card mx-auto text-center" style="max-width: 500px;">
+    <h4 class="mb-3 text-danger">No Rooms Available</h4>
+
+    <p class="text-muted">
+        Currently, all hostel rooms are fully occupied.
+        Please contact the hostel office for further assistance.
+    </p>
+
+    <a href="{% url 'dashboard' %}" class="btn btn-ttd mt-3">
+        Back to Dashboard
+    </a>
+</div>
+
+{% endblock %}

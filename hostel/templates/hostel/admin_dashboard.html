@@ -1,0 +1,8 @@
+{% extends 'hostel/base.html' %}
+{% block content %}
+<div class="ttd-card">
+<h4>Warden Dashboard</h4>
+<a href="{% url 'add-student' %}" class="btn btn-ttd mb-2">Add Student</a>
+<a href="{% url 'add-room' %}" class="btn btn-ttd">Add Room</a>
+</div>
+{% endblock %}

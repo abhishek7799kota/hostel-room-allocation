@@ -1,0 +1,67 @@
+{% extends 'hostel/base.html' %}
+
+{% block content %}
+
+<div class="ttd-card">
+
+    <!-- Greeting -->
+    <h4 class="mb-2">
+        {{ greeting }}, {{ request.user.username }}
+    </h4>
+    <p class="text-muted">
+        Welcome to the Hostel Room Allocation Portal
+    </p>
+
+    <hr>
+
+    <!-- Allocation Status -->
+    <div class="info-card">
+        <p>
+            <strong>Status:</strong>
+            {% if allocation %}
+                <span class="status-allocated">Room Allocated</span>
+            {% else %}
+                <span class="status-not-allocated">Not Allocated</span>
+            {% endif %}
+        </p>
+
+        {% if allocation %}
+            <p>
+                <strong>Room Number:</strong>
+                {{ allocation.room.room_number }}
+            </p>
+        {% else %}
+            <div class="mt-3">
+                <a href="{% url 'apply' %}" class="btn btn-ttd">
+                    Apply for Hostel
+                </a>
+            </div>
+        {% endif %}
+    </div>
+
+    <hr>
+
+    <!-- Room Preferences -->
+    <h6>Room Preferences</h6>
+
+    <p>
+        <strong>Preferred Block:</strong>
+        {% if rooms_exist and student.preferred_block %}
+            Block {{ student.preferred_block }}
+        {% else %}
+            NA
+        {% endif %}
+    </p>
+
+    <p>
+        <strong>Preferred Room Type:</strong>
+        {% if rooms_exist and student.preferred_room_type %}
+            {{ student.get_preferred_room_type_display }}
+        {% else %}
+            NA
+        {% endif %}
+    </p>
+
+</div>
+
+{% endblock %}

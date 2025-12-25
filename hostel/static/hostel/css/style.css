@@ -1,0 +1,205 @@
+/* Professional Government / TTD Style Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;600&family=Merriweather:wght@700&display=swap');
+
+body {
+    font-family: 'Noto Serif', serif;
+    background-color: #fffaf0;
+}
+
+/* Headings */
+h3, h4 {
+    font-family: 'Merriweather', serif;
+}
+
+/* Navbar */
+.ttd-navbar {
+    background-color: #8b0000;
+    color: white;
+    padding: 14px 25px;
+    font-size: 18px;
+}
+
+/* Card */
+.ttd-card {
+    background: white;
+    border: 2px solid #f4c430;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Buttons */
+.btn-ttd {
+    background-color: #8b0000;
+    color: white;
+    border: none;
+}
+
+.btn-ttd:hover {
+    background-color: #6a0000;
+    color: white;
+}
+
+/* Center card */
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Status styles */
+.status-success {
+    border-left: 5px solid green;
+    padding-left: 10px;
+}
+
+.status-pending {
+    border-left: 5px solid red;
+    padding-left: 10px;
+}
+
+/* ---------- FINAL POLISH ---------- */
+
+/* Smooth hover */
+a, button {
+    transition: all 0.2s ease-in-out;
+}
+
+
+/* Dashboard info card */
+.info-card {
+    background: #fff;
+    border: 1px solid #f4c430;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+/* Footer fixed at bottom naturally */
+.footer {
+    background-color: #f8f9fa;
+    text-align: center;
+    padding: 12px;
+    font-size: 14px;
+    color: #555;
+    border-top: 1px solid #ddd;
+}
+
+/* Footer box styling */
+.footer-box {
+    max-width: 800px;
+    margin-bottom: 15px;
+    background: white;
+    border: 1px solid #f4c430;
+    border-radius: 8px;
+    padding: 10px 15px;
+    text-align: center;
+    font-size: 14px;
+    color: #555;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+/* Status text colors */
+.status-allocated {
+    color: #198754; /* Bootstrap green */
+    font-weight: 600;
+}
+
+.status-not-allocated {
+    color: #dc3545; /* Bootstrap red */
+    font-weight: 600;
+}
+
+.footer-author {
+    margin-top: 4px;
+    font-size: 13px;
+    color: #777;
+}
+
+/* ================= ANIMATIONS ================= */
+
+/* Page fade-in */
+body {
+    animation: fadeInPage 0.6s ease-in-out;
+}
+
+@keyframes fadeInPage {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Card slide-up */
+.ttd-card {
+    animation: slideUp 0.6s ease;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Info card subtle pop */
+.info-card {
+    animation: popIn 0.5s ease-in-out;
+}
+
+@keyframes popIn {
+    0% {
+        transform: scale(0.97);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Status text fade */
+.status-allocated,
+.status-not-allocated {
+    animation: fadeStatus 0.8s ease;
+}
+
+@keyframes fadeStatus {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Button hover animation */
+.btn-ttd {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-ttd:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Footer gentle rise */
+.footer-box {
+    animation: footerRise 0.8s ease;
+}
+
+@keyframes footerRise {
+    from {
+        transform: translateY(10px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

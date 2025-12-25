@@ -1,0 +1,17 @@
+{% extends 'hostel/base.html' %}
+
+{% block content %}
+
+<div class="ttd-card mx-auto text-center" style="max-width: 500px;">
+    <h4 class="mb-3">Room Allocated Successfully</h4>
+
+    <p class="text-muted">
+        Your hostel room has been allocated successfully.
+    </p>
+
+    <a href="{% url 'dashboard' %}" class="btn btn-ttd mt-3">
+        Go to Dashboard
+    </a>
+</div>
+
+{% endblock %}
